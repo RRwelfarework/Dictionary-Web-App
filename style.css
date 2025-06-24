@@ -1,0 +1,130 @@
+:root {
+    --bg: #ffffff;
+    --bg-dark: #050505;
+    --text: #1a1a1a;
+    --text-dark: #e5e5e5;
+    --accent: #a855f7;
+    --box: #f9f9f9;
+    --box-dark: #1c1c1c;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s, color 0.3s;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  body.dark {
+    background-color: var(--bg-dark);
+    color: var(--text-dark);
+  }
+
+  header {
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .controls {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .search-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+  }
+
+  .search-section input {
+    padding: 0.8rem 1rem;
+    border-radius: 12px;
+    border: 2px solid var(--accent);
+    width: 300px;
+    font-size: 1.1rem;
+  }
+
+  .search-section button {
+    background-color: var(--accent);
+    color: #fff;
+    border: none;
+    padding: 0.8rem 1.2rem;
+    font-size: 1.1rem;
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .results {
+    max-width: 900px;
+    margin: auto;
+    background-color: var(--box);
+    padding: 2rem;
+    border-radius: 16px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    transition: background 0.3s;
+  }
+
+  body.dark .results {
+    background-color: var(--box-dark);
+  }
+
+  .word-title {
+    font-size: 2rem;
+    font-weight: 800;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .phonetic {
+    font-size: 1.2rem;
+    color: var(--accent);
+    margin: 0.5rem 0;
+  }
+
+  .meanings {
+    margin-top: 1.5rem;
+  }
+
+  .meaning-block {
+    margin-bottom: 1.5rem;
+  }
+
+  .meaning-block strong {
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .synonyms {
+    margin-top: 0.5rem;
+    font-style: italic;
+    color: #777;
+  }
+
+  footer {
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+  }
+
+  @media (max-width: 600px) {
+    .search-section input {
+      width: 100%;
+    }
+  }
